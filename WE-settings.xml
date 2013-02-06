@@ -76,7 +76,7 @@
     <JsHint_scripturl>false</JsHint_scripturl>
     <JsHint_shadow>false</JsHint_shadow>
     <JsHint_smarttabs>true</JsHint_smarttabs>
-    <JsHint_strict>false</JsHint_strict>
+    <JsHint_strict>true</JsHint_strict>
     <JsHint_sub>false</JsHint_sub>
     <JsHint_supernew>false</JsHint_supernew>
     <JsHint_trailing>false</JsHint_trailing>
@@ -94,6 +94,7 @@
     <LessGenerateCssFile>true</LessGenerateCssFile>
     <LessMinify>true</LessMinify>
     <LessShowPreviewWindow>true</LessShowPreviewWindow>
+    <MarkdownMargin_width>510</MarkdownMargin_width>
     <ScssGenerateCssFile>True</ScssGenerateCssFile>
     <ScssMinify>True</ScssMinify>
     <ScssShowPreviewWindow>True</ScssShowPreviewWindow>

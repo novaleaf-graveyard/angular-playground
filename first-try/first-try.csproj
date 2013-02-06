@@ -58,5 +58,36 @@
     <TypeScriptIncludeComments>false</TypeScriptIncludeComments>
     <TypeScriptSourceMap>false</TypeScriptSourceMap>
   </PropertyGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="js\controllers\TodoCtrl.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="d.ts\DefinitelyTyped\angularjs\angular.d.ts" />
+    <Content Include="d.ts\DefinitelyTyped\jquery\jquery.d.ts" />
+    <Content Include="js\controllers\TodoCtrl.js">
+      <DependentUpon>TodoCtrl.ts</DependentUpon>
+    </Content>
+    <Content Include="js\_all.js">
+      <DependentUpon>_all.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="js\_all.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="d.ts\DefinitelyTyped\angularjs\angular.d.key" />
+    <Content Include="d.ts\DefinitelyTyped\jquery\jquery.d.key" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="js\_all.js.map">
+      <DependentUpon>_all.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="js\controllers\TodoCtrl.js.map">
+      <DependentUpon>TodoCtrl.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="d.ts\ReadMe.md" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" />
 </Project>
