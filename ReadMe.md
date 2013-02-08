@@ -62,8 +62,15 @@ but it doesn't seem to function 100% properly, but syntax highlighting works. so
 	- you need to restart chrome for batarang to get loaded
 
 ### learning angularjs ###
-jason is following [this seemingly excelent tutorial on angular+typescript](https://github.com/addyosmani/todomvc/tree/gh-pages/labs/architecture-examples/angularjs_typescript)
-lets hope it all works great!  (you can check the progress in the "*first-try*" subdirectory here)
+- start by following the [angularjs intro tutorials](http://angularjs.org/) (scroll down)
+- second, work through the [angular+typecript todoMVC](https://github.com/addyosmani/todomvc/tree/gh-pages/labs/architecture-examples/angularjs_typescript)
+- then do the [official tutorial](http://docs.angularjs.org/tutorial/) (do it in typescript following the patterns given in the todoMVC!!!)
+
+
+*note*
+
+- jason is following [this seemingly excelent tutorial on angular+typescript](https://github.com/addyosmani/todomvc/tree/gh-pages/labs/architecture-examples/angularjs_typescript)
+and when working through this, is updating __THIS readme__ based on the outcome!
 
 
 ### writing code ###
