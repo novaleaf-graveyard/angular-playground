@@ -11,8 +11,10 @@ var todoModule;
     3) use an IoC injector to bind our view
     */
     var TodoControllerClass = (function () {
-        function TodoControllerClass($scope) {
+        function TodoControllerClass(/** the scope of this controller (bound to the view) */
+        $scope) {
             this.$scope = $scope;
+            var _this = this;
             /** our working-storage of our todo list */
             this.todos = [
                 {
@@ -25,17 +27,19 @@ var todoModule;
                 }
             ];
             $scope.todos = this.todos;
-            $scope.tempVal = "hello";
+            //need to use lambda's so the method's scope ("this") is inside this TodoControllerClass, not inside $scope
             $scope.addTodo = function () {
-                $scope.todos.push({
-                    text: $scope.todoText,
-                    done: false
-                });
-                $scope.todoText = "";
+                return _this.addTodo();
+            };
+            $scope.todoText = "";
+            $scope.remaining = function () {
+                return _this.remaining();
+            };
+            $scope.archive = function () {
+                return _this.archive();
             };
         }
-        TodoControllerClass.prototype.injection = //populate with initial (sample) values
-        /** IoC injection for binding our controller to the view during application load
+        TodoControllerClass.prototype.injection = /** IoC injection for binding our controller to the view during application load
         
         */
         function () {
@@ -43,6 +47,30 @@ var todoModule;
                 '$scope', 
                 TodoControllerClass
             ];
+        };
+        TodoControllerClass.prototype.addTodo = //populate with initial (sample) values
+        function () {
+            this.$scope.todos.push({
+                text: this.$scope.todoText,
+                done: false
+            });
+        };
+        TodoControllerClass.prototype.remaining = function () {
+            var count = 0;
+            angular.forEach(this.$scope.todos, function (todo) {
+                count += todo.done ? 0 : 1;
+            });
+            return count;
+        };
+        TodoControllerClass.prototype.archive = function () {
+            var _this = this;
+            var oldTodos = this.$scope.todos;
+            this.$scope.todos = [];
+            angular.forEach(oldTodos, function (todo) {
+                if(!todo.done) {
+                    _this.$scope.todos.push(todo);
+                }
+            });
         };
         return TodoControllerClass;
     })();

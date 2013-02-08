@@ -18,12 +18,9 @@ module todoModule {
 	*/
 	export class TodoControllerClass {
 
-		public temp;
-		/** our working-storage of our todo list */
-		private todos = [{ text: "learn angular", done: true }, { text: "build an angular app", done: false }]; //populate with initial (sample) values
 
 		/** IoC injection for binding our controller to the view during application load 
-
+		
 		*/
 		public injection(): any[] {
 			return [
@@ -32,13 +29,39 @@ module todoModule {
 			]
 		}
 
-		constructor(private $scope) {
+		constructor(
+/** the scope of this controller (bound to the view) */
+			private $scope) {
 			$scope.todos = this.todos;
-			$scope.tempVal = "hello";
-			$scope.addTodo = function () {
-				$scope.todos.push({ text: $scope.todoText, done: false });
-				$scope.todoText = "";
-			};
+			//need to use lambda's so the method's scope ("this") is inside this TodoControllerClass, not inside $scope
+			$scope.addTodo = () => this.addTodo();
+			$scope.todoText = "";
+			$scope.remaining = () => this.remaining();
+			$scope.archive = () => this.archive();
+		}
+
+		/** our working-storage of our todo list */
+		private todos = [{ text: "learn angular", done: true }, { text: "build an angular app", done: false }]; //populate with initial (sample) values
+
+		private addTodo() {
+			this.$scope.todos.push({ text: this.$scope.todoText, done: false });
+		}
+
+		private remaining() {
+			var count = 0;
+			angular.forEach(this.$scope.todos, (todo) => {
+				count += todo.done ? 0 : 1;
+			});
+			return count;
+		}
+		private archive() {
+			var oldTodos = this.$scope.todos;
+			this.$scope.todos = [];
+			angular.forEach(oldTodos, (todo) => {
+				if (!todo.done) {
+					this.$scope.todos.push(todo);
+				}
+			});
 		}
 
 
@@ -46,9 +69,9 @@ module todoModule {
 	}
 	/** create the application, stored as a local variable for no real reason */
 	var todoMvcApp = angular.module(
-		/** the name of this application, used in the view for ng-app */
+/** the name of this application, used in the view for ng-app */
 		'todoMvcAppRoot', [])
-		/** specify the controller for the html-view, and set it up via IoC injection */
+/** specify the controller for the html-view, and set it up via IoC injection */
 				.controller('todoControllerScope', TodoControllerClass.prototype.injection());
 	//other directives can be added too, see http://docs.angularjs.org/api/angular.module
 	//.directive('todoBlur', TodoBlur.prototype.injection())
