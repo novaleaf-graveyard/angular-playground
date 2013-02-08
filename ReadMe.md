@@ -43,7 +43,7 @@ but because sublime supports syntax via plugins
 
 - get sublime [from here](http://www.sublimetext.com/2)
 - get the [typescript plugin from here](https://github.com/raph-amiard/sublime-typescript), 
-but it doesn't seem complete, so maybe if you need more, you can [search for something better](http://stackoverflow.com/questions/12845412/typescript-plugin-for-sublime)
+but it doesn't seem to function 100% properly, but syntax highlighting works. so maybe if you need more, you can [search for something better](http://stackoverflow.com/questions/12845412/typescript-plugin-for-sublime)
 
 ### build and library integration tools ###
 
