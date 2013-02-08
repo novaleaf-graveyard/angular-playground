@@ -58,11 +58,19 @@ but it doesn't seem complete, so maybe if you need more, you can [search for som
 
 - [live page extension for chrome](https://chrome.google.com/webstore/detail/livepage/pilnojpmdoofaelbinaeodfpjheijkbh)
 - turn on source map support in chrome dev settings to debug the .ts files
-
+- install [AngularJS Batarang](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk/related?hl=en)  [info/instructions here](http://blog.angularjs.org/2012/07/introducing-angularjs-batarang.html)
+	- you need to restart chrome for batarang to get loaded
 ### learning angularjs ###
 jason is following [this seemingly excelent tutorial on angular+typescript](https://github.com/addyosmani/todomvc/tree/gh-pages/labs/architecture-examples/angularjs_typescript)
 lets hope it all works great!  (you can check the progress in the "*first-try*" subdirectory here)
 
+
+### writing code ###
+
+####html####
+- use [zen coding](http://code.google.com/p/zen-coding/) instead of writing normal HTML (this is supported by the web-essentials VS plugin)
+	- [full syntax](http://code.google.com/p/zen-coding/wiki/ZenHTMLSelectorsEn)
+	- [quick reference](http://www.johnpapa.net/zen-coding-in-visual-studio-2012/)
 
 
 

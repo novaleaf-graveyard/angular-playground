@@ -24,7 +24,7 @@
     <HtmlEnableMustache>true</HtmlEnableMustache>
     <HtmlEnableZenCoding>true</HtmlEnableZenCoding>
     <JavaScriptAutoCloseBraces>true</JavaScriptAutoCloseBraces>
-    <JavaScriptEnableMinification>true</JavaScriptEnableMinification>
+    <JavaScriptEnableMinification>false</JavaScriptEnableMinification>
     <JavascriptEnableRegions>true</JavascriptEnableRegions>
     <JavaScriptGenerateSourceMaps>true</JavaScriptGenerateSourceMaps>
     <JavaScriptOutlining>true</JavaScriptOutlining>
@@ -103,6 +103,7 @@
     <TypeScriptCompileOnBuild>true</TypeScriptCompileOnBuild>
     <TypeScriptGenerateJsFile>true</TypeScriptGenerateJsFile>
     <TypeScriptKeepComments>true</TypeScriptKeepComments>
+    <TypeScriptMargin_width>454</TypeScriptMargin_width>
     <TypeScriptMinify>false</TypeScriptMinify>
     <TypeScriptProduceSourceMap>true</TypeScriptProduceSourceMap>
     <TypeScriptResaveWithUtf8BOM>false</TypeScriptResaveWithUtf8BOM>

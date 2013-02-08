@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="todoMvcApp">
+<head>
+    <title>Angular Tutorial 2: "Add Some Control"</title>
+    
+    <script src="../lib/jquery/jquery-1.9.1.js"></script>
+    <script src="../lib/angular-1.0.4/angular.js"></script>
+    <script src="todo.js"></script>
+    <!--link[rel=stylesheet href=todo.css]-->
+    <link rel="stylesheet" href="todo.css" />
+
+</head>
+<body>
+    <h2>todo</h2>
+
+    <!--div[ng-controller=TodoControl]-->
+    <div ng-controller="todoController">
+        <span id="try1"> temp = {{tempVal}}</span>
+        <br />
+        <span id="try2"> {{remaining()}} of  remaining</span>
+        <br />
+        <span id="try4"> {{remaining()}} of  remaining</span>
+        <br />
+        <span id="try5"> {{remaining()}} of  remaining</span>
+        <br />
+        <span id="try6"> temp = {{tempVal}}</span>        
+        <br />
+        <span id="try3"> bug here!  temp = {{tempVal}} </span>
+    </div>
+
+</body>
+</html>

@@ -59,13 +59,13 @@
     <TypeScriptSourceMap>false</TypeScriptSourceMap>
   </PropertyGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="js\controllers\TodoCtrl.ts" />
+    <TypeScriptCompile Include="js\controllers\TodoControl.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="d.ts\DefinitelyTyped\angularjs\angular.d.ts" />
     <Content Include="d.ts\DefinitelyTyped\jquery\jquery.d.ts" />
-    <Content Include="js\controllers\TodoCtrl.js">
-      <DependentUpon>TodoCtrl.ts</DependentUpon>
+    <Content Include="js\controllers\TodoControl.js">
+      <DependentUpon>TodoControl.ts</DependentUpon>
     </Content>
     <Content Include="js\_all.js">
       <DependentUpon>_all.ts</DependentUpon>
@@ -82,12 +82,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="js\controllers\TodoCtrl.js.map">
-      <DependentUpon>TodoCtrl.ts</DependentUpon>
-    </Content>
+    <Content Include="d.ts\ReadMe.md" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="d.ts\ReadMe.md" />
+    <Content Include="js\controllers\TodoControl.js.map">
+      <DependentUpon>TodoControl.ts</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" />
 </Project>
