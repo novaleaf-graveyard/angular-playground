@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" ng-app="todoMvcApp">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="todoMvcAppRoot">
 <head>
     <title>Angular Tutorial 2: "Add Some Control"</title>
     
@@ -13,9 +13,9 @@
 <body>
     <h2>todo</h2>
 
-    <!--div[ng-controller=TodoControl]-->
-    <div ng-controller="todoController">
-        <span id="try1"> temp = {{tempVal}}</span>
+    <!--div[ng-controller=todoControllerScope]-->
+    <div ng-controller="todoControllerScope">
+        <span id="try1"> tempVal = {{tempVal}}</span>
         <br />
         <span id="try2"> {{remaining()}} of  remaining</span>
         <br />
@@ -27,6 +27,6 @@
         <br />
         <span id="try3"> bug here!  temp = {{tempVal()}} </span>
     </div>
-
+    
 </body>
 </html>

@@ -44,7 +44,40 @@ module ng {
         isObject(value: any): bool;
         isString(value: any): bool;
         isUndefined(value: any): bool;
-        lowercase(str: string): string;        
+        lowercase(str: string): string;
+/** 
+http://docs.angularjs.org/api/angular.module
+
+Description
+The angular.module is a global place for creating and registering Angular modules. All modules (angular core or 3rd party) that should be available to an application must be registered using this mechanism.
+
+Module
+A module is a collocation of services, directives, filters, and configuration information. Module is used to configure the $injector.
+
+// Create a new module
+var myModule = angular.module('myModule', []);
+ 
+// register a new service
+myModule.value('appName', 'MyCoolApp');
+ 
+// configure existing services inside initialization blocks.
+myModule.config(function($locationProvider) {
+	// Configure existing providers
+	$locationProvider.hashPrefix('!');
+});
+Then you can create an injector and load your modules like this:
+
+var injector = angular.injector(['ng', 'MyModule'])
+However it's more likely that you'll just use ngApp or angular.bootstrap to simplify this process for you.
+
+Usage
+angular.module(name[, requires], configFn);
+Parameters
+name – {!string} – The name of the module to create or retrieve.
+requires(optional) – {Array.<string>=} – If specified then new module is being created. If unspecified then the the module is being retrieved for further configuration.
+configFn – {Function} – Optional configuration function for the module. Same as Module#config().
+@return {module} – new module with the angular.Module api.
+*/
         module(name: string, requires?: string[], configFunction?: Function): IModule;
         noop(...args: any[]): void;
         toJson(obj: any, pretty?: bool): string;
@@ -61,13 +94,27 @@ module ng {
     ///////////////////////////////////////////////////////////////////////////
     // Module
     // see http://docs.angularjs.org/api/angular.Module
-    ///////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////
+	/** 	
+	Interface for configuring angular modules.   
+	see http://docs.angularjs.org/api/angular.Module 
+	*/
     interface IModule {
         config(configFn: Function): IModule;
         config(inlineAnnotadedFunction: any[]): IModule;
         constant(name: string, value: any): IModule;
-        controller(name: string, controllerConstructor: Function): IModule;
-        controller(name: string, inlineAnnotadedConstructor: any[]): IModule;
+		/** The $controller service is used by Angular to create new controllers */
+        controller(
+        	/** Controller name */
+        	name: string,
+			/** Controller constructor fn (optionally decorated with DI annotations in the array notation) */
+        		controllerConstructor: Function): IModule;
+		/** The $controller service is used by Angular to create new controllers */
+        controller(
+			/** Controller name */
+        	name: string,
+			/** Controller constructor fn (optionally decorated with DI annotations in the array notation) */
+        	inlineAnnotadedConstructor: any[]): IModule;
         directive(name: string, directiveFactory: Function): IModule;
         directive(name: string, inlineAnnotadedFunction: any[]): IModule;        
         factory(name: string, serviceFactoryFunction: Function): IModule;
