@@ -29,14 +29,10 @@
                 </span>
             </li>
         </ul>
-        <br />
-<!--        <span id="try4"> {{remaining()}} of  remaining</span>
-        <br />
-        <span id="try5"> {{remaining()}} of  remaining</span>
-        <br />
-        <span id="try6"> temp = {{tempVal}}</span>        
-        <br />
-        <span id="try3"> bug here!  temp = {{tempVal()}} </span>-->
+        <form ng-submit="addTodo()">
+            <input type="text" value="" ng-model="todoText" size="30" placeholder="add new todo here" />
+            <input type="submit" value="add" class="btn-primary" />
+        </form>
     </div>
     
 </body>
