@@ -36,12 +36,14 @@ this is to help jason (and maybe all novaleaf app team members) learn
 		- afterwards, go to the settings and set VS as your diff viewer
 	- Productivity Power Tools
 	- and if you want better markdown editing than provided by web essentials, [try this](http://visualstudiogallery.msdn.microsoft.com/0855e23e-4c4c-4c82-8b39-24ab5c5a7f79?SRC=VSIDE) (i have not)
+- configure Typescript files to use tabs, not spaces *__(Tools-->Options-->Text Editor-->Typescript-->Tabs)__*
 
 ### linux / osx ide ecosystems ###
 
 things you should figure out (on your own)
 1. install the typescript compiler
 1. install the syntax highlighter
+1. use tabs, not spaces to indent!
 1. use jsHint (not jsLint) on your code (see the WE-settings.xml file for how to configure it)
 1. figure out how to build the project (.ts files to .js)
 

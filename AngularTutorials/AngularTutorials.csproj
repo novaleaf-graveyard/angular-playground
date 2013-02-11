@@ -33,6 +33,7 @@
     <Content Include="AddSomeControl\todo.js">
       <DependentUpon>todo.ts</DependentUpon>
     </Content>
+    <Content Include="d.ts\DefinitelyTyped\angularjs\angular-resource.d.ts" />
     <Content Include="d.ts\DefinitelyTyped\angularjs\angular.d.ts" />
     <Content Include="d.ts\DefinitelyTyped\jquery\jquery.d.ts" />
     <Content Include="lib\jquery\jquery-1.9.1.js" />
@@ -518,6 +519,8 @@
     <Content Include="AddSomeControlTypescripted\todo.js.map">
       <DependentUpon>todo.ts</DependentUpon>
     </Content>
+    <Content Include="d.ts\DefinitelyTyped\angularjs\angular-resource.d.key" />
+    <Content Include="lib\ReadMe.md" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
