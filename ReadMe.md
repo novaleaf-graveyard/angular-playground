@@ -37,6 +37,16 @@ this is to help jason (and maybe all novaleaf app team members) learn
 	- Productivity Power Tools
 	- and if you want better markdown editing than provided by web essentials, [try this](http://visualstudiogallery.msdn.microsoft.com/0855e23e-4c4c-4c82-8b39-24ab5c5a7f79?SRC=VSIDE) (i have not)
 
+### linux / osx ide ecosystems ###
+
+things you should figure out (on your own)
+1. install the typescript compiler
+1. install the syntax highlighter
+1. use jsHint (not jsLint) on your code (see the WE-settings.xml file for how to configure it)
+1. figure out how to build the project (.ts files to .js)
+
+the code should still be compatable,  so figure it out and please update this section!
+
 ### sublime text 2 ide ###
 this is basically a replacement for notepad++, 
 not because there's anythign wrong with notepad++, 
@@ -46,6 +56,7 @@ but because sublime supports syntax via plugins
 - get the [typescript plugin from here](https://github.com/raph-amiard/sublime-typescript), 
 but it doesn't seem to function 100% properly, but syntax highlighting works. so maybe if you need more, you can [search for something better](http://stackoverflow.com/questions/12845412/typescript-plugin-for-sublime)
 	- FYI if you just want syntax coloring, an easier way is you can just unzip the following to a "Typescript" folder under plugins [Official Sublime Syntax](http://blogs.msdn.com/b/interoperability/archive/2012/10/01/sublime-text-vi-emacs-typescript-enabled.aspx)
+
 ### build and library integration tools ###
 
 - [nodejs /npm](http://nodejs.org/)
@@ -64,6 +75,7 @@ but it doesn't seem to function 100% properly, but syntax highlighting works. so
 
 ### learning angularjs ###
 - start by following the [angularjs intro tutorials](http://angularjs.org/) (scroll down)
+
 - second, work through the [angular+typecript todoMVC](https://github.com/addyosmani/todomvc/tree/gh-pages/labs/architecture-examples/angularjs_typescript)
 - then do the [official tutorial](http://docs.angularjs.org/tutorial/) (do it in typescript following the patterns given in the todoMVC!!!)
 
@@ -72,6 +84,15 @@ but it doesn't seem to function 100% properly, but syntax highlighting works. so
 
 - jason is following [this seemingly excelent tutorial on angular+typescript](https://github.com/addyosmani/todomvc/tree/gh-pages/labs/architecture-examples/angularjs_typescript)
 and when working through this, is updating __THIS readme__ based on the outcome!
+
+#### steps jason took to learning Javascript et. al ####
+1. read "Javascript, the good parts"
+1. do typescript online tutorial [here](http://www.typescriptlang.org/Tutorial/)
+1. do samples in chapter 1 of the typescript documentation [here](http://go.microsoft.com/fwlink/?LinkId=267238)
+1. do angular js tutorials "The Basics" and "Add Some Control" ( from the [first page of the site](http://angularjs.org/#project-html))
+	- use zen coding for the html sections
+1. redo "Add Some Control" using Typescript interfaces / modules (called "AddSomeControlTypescripted" in the source)
+
 
 
 ### writing code ###
