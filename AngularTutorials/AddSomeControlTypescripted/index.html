@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="todoMvcAppRoot">
+<head>
+    <title>Angular Tutorial 2: "Add Some Control"</title>
+    
+    <script src="../lib/jquery/jquery-1.9.1.js"></script>
+    <script src="../lib/angular-1.0.4/angular.js"></script>
+    <script src="todo.js"></script>
+    <!--zencoding= link[rel=stylesheet href=todo.css]-->
+    <link rel="stylesheet" href="todo.css" />
+
+</head>
+<body>
+    <h2>todo</h2>
+
+    <!--div[ng-controller=todoControllerScope]-->
+    <div ng-controller="todoControllerScope">
+        <!--<span id="try1"> tempVal = {{tempVal}}</span>
+        <br />-->
+        <span> {{remaining()}} of  remaining</span>
+        [ <a href="" ng-click="archive()">archive</a> ]
+        <!--ul.unstyled-->
+        <ul class="unstyled">
+            <!-- makes a repeater, foreach(todo in todos) -->
+            <li ng-repeat="todo in todos"> 
+                <input type="checkbox" value="" ng-model="todo.done" />
+                <span class="done-{{todo.done}}">
+                    {{todo.text}}
+                </span>
+            </li>
+        </ul>
+        <form ng-submit="addTodo()">
+            <input type="text" value="" ng-model="todoText" size="30" placeholder="add new todo here" />
+            <input type="submit" value="add" class="btn-primary" />
+        </form>
+    </div>
+    
+</body>
+</html>
