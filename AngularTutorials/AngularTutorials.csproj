@@ -21,6 +21,12 @@
     <UpgradeBackupLocation />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="AddSomeControlTypescripted\index.html" />
+    <Content Include="AddSomeControlTypescripted\todo.css" />
+    <Content Include="AddSomeControlTypescripted\todo.js">
+      <DependentUpon>todo.ts</DependentUpon>
+    </Content>
+    <Content Include="AddSomeControlTypescripted\todo.ts" />
     <Content Include="AddSomeControl\index.html" />
     <TypeScriptCompile Include="AddSomeControl\todo.ts" />
     <Content Include="AddSomeControl\todo.css" />
@@ -509,6 +515,9 @@
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddSomeControlTypescripted\todo.js.map">
+      <DependentUpon>todo.ts</DependentUpon>
+    </Content>
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

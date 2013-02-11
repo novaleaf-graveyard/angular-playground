@@ -21,8 +21,9 @@ this is to help jason (and maybe all novaleaf app team members) learn
 ### source control ###
 *install github first if you want it to auto-set your user info*
 
-- [github for windows](https://help.github.com/articles/set-up-git)
-- [msysgit for windows](http://msysgit.github.com/)
+- [github for windows](https://help.github.com/articles/set-up-git) official github client
+- [msysgit for windows](http://msysgit.github.com/)  needed for VS integration, and also a prereq for...
+- [tortoise git (for windows)](http://code.google.com/p/tortoisegit/) (so you have windows explorer integration too)
 
 ### VS ide ecosystems ###
 - visual studio
@@ -44,7 +45,7 @@ but because sublime supports syntax via plugins
 - get sublime [from here](http://www.sublimetext.com/2)
 - get the [typescript plugin from here](https://github.com/raph-amiard/sublime-typescript), 
 but it doesn't seem to function 100% properly, but syntax highlighting works. so maybe if you need more, you can [search for something better](http://stackoverflow.com/questions/12845412/typescript-plugin-for-sublime)
-
+	- FYI if you just want syntax coloring, an easier way is you can just unzip the following to a "Typescript" folder under plugins [Official Sublime Syntax](http://blogs.msdn.com/b/interoperability/archive/2012/10/01/sublime-text-vi-emacs-typescript-enabled.aspx)
 ### build and library integration tools ###
 
 - [nodejs /npm](http://nodejs.org/)

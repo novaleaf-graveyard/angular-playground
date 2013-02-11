@@ -15,9 +15,10 @@ var todoModule;
     /**
     extend an instance of ng.IScope with our variables/functions needed for ITodoScope
     this method acts as a psudo-constructor, adding the needed initialization logic to make this extending of the base class occur
-    @returns the input scope, cast to our ITodoScope type
+    @returns the input ng.IScope, cast to our ITodoScope type
     */
-    function ITodoScope_Extend($scope, controller) {
+    function ITodoScope_Extend($scope, /** reference to the scope's parent controller.  not needed right now, but seems like a good pattern to have "just in case" */
+    controller) {
         //cast the input scope to our extended type, so we can (type)safely add our extended functionality
         var _this = $scope;
         //construct our extended functionality
