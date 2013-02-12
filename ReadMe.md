@@ -41,6 +41,7 @@ this is to help jason (and maybe all novaleaf app team members) learn
 ### linux / osx ide ecosystems ###
 
 things you should figure out (on your own)
+
 1. install the typescript compiler
 1. install the syntax highlighter
 1. use tabs, not spaces to indent!
@@ -76,11 +77,10 @@ but it doesn't seem to function 100% properly, but syntax highlighting works. so
 	- you need to restart chrome for batarang to get loaded
 
 ### learning angularjs ###
-- start by following the [angularjs intro tutorials](http://angularjs.org/) (scroll down)
 
+- start by following the [angularjs intro tutorials](http://angularjs.org/) (scroll down)
 - second, work through the [angular+typecript todoMVC](https://github.com/addyosmani/todomvc/tree/gh-pages/labs/architecture-examples/angularjs_typescript)
 - then do the [official tutorial](http://docs.angularjs.org/tutorial/) (do it in typescript following the patterns given in the todoMVC!!!)
-
 
 *note*
 
@@ -109,5 +109,6 @@ and when working through this, is updating __THIS readme__ based on the outcome!
 	- try to use Emmet/Zen coding for the html sections
 	- redo "Add Some Control" using Typescript interfaces / modules (called "AddSomeControlTypescripted" in the source)
 	- ([jason's implementation here](AngularTutorials))
-1. 
+1. create this github project and document it
+
 
