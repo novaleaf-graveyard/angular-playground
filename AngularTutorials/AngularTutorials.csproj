@@ -39,6 +39,7 @@
     <Content Include="lib\jquery\jquery-1.9.1.js" />
     <Content Include="TheBasics.html" />
     <Fakes Include="_all.ts" />
+    <Content Include="WireUpABackend\index.html" />
     <Content Include="_all.js">
       <DependentUpon>_all.ts</DependentUpon>
     </Content>
@@ -521,6 +522,7 @@
     </Content>
     <Content Include="d.ts\DefinitelyTyped\angularjs\angular-resource.d.key" />
     <Content Include="lib\ReadMe.md" />
+    <Content Include="Readme.md" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

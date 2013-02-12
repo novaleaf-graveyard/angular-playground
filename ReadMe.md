@@ -105,10 +105,10 @@ and when working through this, is updating __THIS readme__ based on the outcome!
 	- ([jason's implementation here](TypeScriptQuickStart))
 1. do samples in chapter 1 of the typescript documentation [here](http://go.microsoft.com/fwlink/?LinkId=267238)
 	-  ([jason's implementation here](TypeScript-Language-Specs-Playground))
+1. create this github project and document it
 1. do angular js tutorials "The Basics" and "Add Some Control" ( from the [first page of the site](http://angularjs.org/#project-html))
 	- try to use Emmet/Zen coding for the html sections
 	- redo "Add Some Control" using Typescript interfaces / modules (called "AddSomeControlTypescripted" in the source)
 	- ([jason's implementation here](AngularTutorials))
-1. create this github project and document it
 
 

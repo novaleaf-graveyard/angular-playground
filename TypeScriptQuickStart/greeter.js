@@ -27,4 +27,5 @@ function write(value) {
 write(greeter(user))//implicitly cast Student to Person (ducktyping)
 ;
 //"Hello, jane User"
+//"Hello, jane User"
 //@ sourceMappingURL=greeter.js.map
