@@ -87,22 +87,27 @@ but it doesn't seem to function 100% properly, but syntax highlighting works. so
 - jason is following [this seemingly excelent tutorial on angular+typescript](https://github.com/addyosmani/todomvc/tree/gh-pages/labs/architecture-examples/angularjs_typescript)
 and when working through this, is updating __THIS readme__ based on the outcome!
 
-#### steps jason took to learning Javascript et. al ####
-1. read "Javascript, the good parts"
-1. do typescript online tutorial [here](http://www.typescriptlang.org/Tutorial/)
-1. do samples in chapter 1 of the typescript documentation [here](http://go.microsoft.com/fwlink/?LinkId=267238)
-1. do angular js tutorials "The Basics" and "Add Some Control" ( from the [first page of the site](http://angularjs.org/#project-html))
-	- use zen coding for the html sections
-1. redo "Add Some Control" using Typescript interfaces / modules (called "AddSomeControlTypescripted" in the source)
-
-
 
 ### writing code ###
 
-####html####
-- use [zen coding](http://code.google.com/p/zen-coding/) instead of writing normal HTML (this is supported by the web-essentials VS plugin)
+####html (use Emmet) ####
+- can use [zen coding](http://code.google.com/p/zen-coding/) instead of writing normal HTML (this is supported by the web-essentials VS plugin)
 	- [full syntax](http://code.google.com/p/zen-coding/wiki/ZenHTMLSelectorsEn)
 	- [quick reference](http://www.johnpapa.net/zen-coding-in-visual-studio-2012/)
+- __note__ seems that some of [Emmet](http://docs.emmet.io/) is supported in VS Web Essentials, so here is a [cheat sheet for emmet](http://docs.emmet.io/cheat-sheet/)  (use this in preference to zen coding syntax if possible!)
 
 
+
+
+# steps jason took to learning Javascript et. al #
+1. read "Javascript, the good parts"
+1. do typescript online tutorial [here](http://www.typescriptlang.org/Tutorial/) 
+	- ([jason's implementation here](TypeScriptQuickStart))
+1. do samples in chapter 1 of the typescript documentation [here](http://go.microsoft.com/fwlink/?LinkId=267238)
+	-  ([jason's implementation here](TypeScript-Language-Specs-Playground))
+1. do angular js tutorials "The Basics" and "Add Some Control" ( from the [first page of the site](http://angularjs.org/#project-html))
+	- try to use Emmet/Zen coding for the html sections
+	- redo "Add Some Control" using Typescript interfaces / modules (called "AddSomeControlTypescripted" in the source)
+	- ([jason's implementation here](AngularTutorials))
+1. 
 
