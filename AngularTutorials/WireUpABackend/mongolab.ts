@@ -1,16 +1,5 @@
 /// <reference path="_all.ts"/>
 
-/** @define {boolean} */
-var DEBUG_MODE = true;
-
-var debug;
-if (DEBUG_MODE) {
-	/** @param {...} args */
-	debug = function (args) { console.log.apply(console, arguments); }
-} else {
-	/** @param {...} args */
-	debug = function (args) { }
-}
 
 module mongolab {
 
@@ -40,14 +29,14 @@ module mongolab {
 
 	//cloud persistance
 	angular.module("mongolab", ["ngResource"])
-	.factory("Project", storageServiceFactory);
+	.factory("Project", mongoDbResourceFactory);
 
-	function storageServiceFactory($resource: ng.resource.IResourceService) {
+	function mongoDbResourceFactory($resource: ng.resource.IResourceService) : ng.resource.IResourceClass  {
 
 		//ngResource definition of an action descriptor, will inject this into our Project class below
 		var updateDescriptor: ng.resource.IActionDescriptor = { method: "PUT" };
 
-
+		//create the "Project" class (resource class) 
 		var Project = <IMongoDbResourceClass> $resource("https://api.mongolab.com/api/1/databases"
 			+ "/angularjs/collections/projects/:id"
 			, { apiKey: '4f847ad3e4b08a2eed5f3b54' }
@@ -57,9 +46,10 @@ module mongolab {
 			);
 		
 		//looks to be a facade, invoking the singleton instance of ProjectClass
+		//provide implemention of the update method
 		Project.prototype.update = function (cb) {
 
-			debugger;
+			Logger.assert(false, "jason, figure out type of 'this', so we can maybe strongly type it");
 
 
 			//not sure what "this" is or where the value of _id is comming from
@@ -72,13 +62,13 @@ module mongolab {
 					, cb
 					);
 		};
+		//provide implemention of the destroy method
 		Project.prototype.destroy = function (cb) {
 			return Project.remove({ id: this._id.$oid }, cb);
 		};
 
 		return Project;
 	}
-
 
 
 

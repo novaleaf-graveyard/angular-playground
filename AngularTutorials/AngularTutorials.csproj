@@ -33,13 +33,22 @@
     <Content Include="AddSomeControl\todo.js">
       <DependentUpon>todo.ts</DependentUpon>
     </Content>
-    <Content Include="d.ts\DefinitelyTyped\angularjs\angular-resource.d.ts" />
-    <Content Include="d.ts\DefinitelyTyped\angularjs\angular.d.ts" />
-    <Content Include="d.ts\DefinitelyTyped\jquery\jquery.d.ts" />
     <Content Include="lib\jquery\jquery-1.9.1.js" />
     <Content Include="TheBasics.html" />
     <Fakes Include="_all.ts" />
     <Content Include="WireUpABackend\index.html" />
+    <TypeScriptCompile Include="WireUpABackend\project.ts" />
+    <TypeScriptCompile Include="WireUpABackend\mongolab.ts" />
+    <Content Include="WireUpABackend\mongolab.js">
+      <DependentUpon>mongolab.ts</DependentUpon>
+    </Content>
+    <Content Include="WireUpABackend\project.js">
+      <DependentUpon>project.ts</DependentUpon>
+    </Content>
+    <Fakes Include="WireUpABackend\_all.ts" />
+    <Content Include="WireUpABackend\_all.js">
+      <DependentUpon>_all.ts</DependentUpon>
+    </Content>
     <Content Include="_all.js">
       <DependentUpon>_all.ts</DependentUpon>
     </Content>
@@ -482,12 +491,6 @@
     <Content Include="lib\angular-1.0.4\version.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="d.ts\DefinitelyTyped\angularjs\angular.d.key" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="d.ts\DefinitelyTyped\jquery\jquery.d.key" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="d.ts\ReadMe.md" />
   </ItemGroup>
   <ItemGroup>
@@ -520,7 +523,6 @@
     <Content Include="AddSomeControlTypescripted\todo.js.map">
       <DependentUpon>todo.ts</DependentUpon>
     </Content>
-    <Content Include="d.ts\DefinitelyTyped\angularjs\angular-resource.d.key" />
     <Content Include="lib\ReadMe.md" />
     <Content Include="Readme.md" />
     <None Include="web.Debug.config">
@@ -529,6 +531,15 @@
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
+    <Content Include="WireUpABackend\project.js.map">
+      <DependentUpon>project.ts</DependentUpon>
+    </Content>
+    <Content Include="WireUpABackend\_all.js.map">
+      <DependentUpon>_all.ts</DependentUpon>
+    </Content>
+    <Content Include="WireUpABackend\mongolab.js.map">
+      <DependentUpon>mongolab.ts</DependentUpon>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
