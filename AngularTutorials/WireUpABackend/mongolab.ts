@@ -44,14 +44,15 @@ module mongolab {
 
 	function storageServiceFactory($resource: ng.resource.IResourceService) {
 
+		//ngResource definition of an action descriptor, will inject this into our Project class below
 		var updateDescriptor: ng.resource.IActionDescriptor = { method: "PUT" };
 
 
 		var Project = <IMongoDbResourceClass> $resource("https://api.mongolab.com/api/1/databases"
 			+ "/angularjs/collections/projects/:id"
 			, { apiKey: '4f847ad3e4b08a2eed5f3b54' }
-			, {
-				update: updateDescriptor
+			,{
+				update: updateDescriptor //injects our update as an "action descriptor"
 			}
 			);
 		
@@ -77,6 +78,8 @@ module mongolab {
 
 		return Project;
 	}
+
+
 
 
 }

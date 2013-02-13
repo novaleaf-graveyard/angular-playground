@@ -19,6 +19,7 @@ var mongolab;
         "ngResource"
     ]).factory("Project", storageServiceFactory);
     function storageServiceFactory($resource) {
+        //ngResource definition of an action descriptor, will inject this into our Project class below
         var updateDescriptor = {
             method: "PUT"
         };
@@ -27,6 +28,7 @@ var mongolab;
         }, {
             update: updateDescriptor
         });
+        //injects our update as an "action descriptor"
         //looks to be a facade, invoking the singleton instance of ProjectClass
         Project.prototype.update = function (cb) {
             debugger;
