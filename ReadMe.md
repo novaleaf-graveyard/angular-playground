@@ -110,5 +110,10 @@ and when working through this, is updating __THIS readme__ based on the outcome!
 	- try to use Emmet/Zen coding for the html sections
 	- redo "Add Some Control" using Typescript interfaces / modules (called "AddSomeControlTypescripted" in the source)
 	- ([jason's implementation here](AngularTutorials))
+1. run into a brick wall when trying to look inside angularjs to see "how it works" (very complex internals, and [very poor documentation](http://docs.angularjs.org/api/angular.module)
+	- investigating other frameworks (looking for something less "heavy") next i will try [Knockback](http://kmalakoff.github.com/knockback/)
+1. create the [Typescript-Knockback-playground](https://github.com/Novaleaf/Typescript-Knockback-Playground) github project to give it a try
+	- will start by recreating the [official knockback todoMVC tutorial](http://kmalakoff.github.com/knockback/app_todos.html) in typescript ([demo](http://kmalakoff.github.com/knockback-todos-app/))
 
+# thus i will not be updating this project any more unless i come back to angularjs... (i've moved to [Typescript-Knockback-playground](https://github.com/Novaleaf/Typescript-Knockback-Playground))
 

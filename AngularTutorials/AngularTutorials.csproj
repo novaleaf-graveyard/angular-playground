@@ -34,6 +34,10 @@
       <DependentUpon>todo.ts</DependentUpon>
     </Content>
     <Content Include="lib\jquery\jquery-1.9.1.js" />
+    <TypeScriptCompile Include="scripts\helpers.ts" />
+    <Content Include="scripts\helpers.js">
+      <DependentUpon>helpers.ts</DependentUpon>
+    </Content>
     <Content Include="TheBasics.html" />
     <Fakes Include="_all.ts" />
     <Content Include="WireUpABackend\index.html" />
@@ -513,9 +517,7 @@
       <DependentUpon>todo.ts</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="js\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="web.config" />
   </ItemGroup>
@@ -525,6 +527,9 @@
     </Content>
     <Content Include="lib\ReadMe.md" />
     <Content Include="Readme.md" />
+    <Content Include="scripts\helpers.js.map">
+      <DependentUpon>helpers.ts</DependentUpon>
+    </Content>
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

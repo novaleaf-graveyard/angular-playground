@@ -31,7 +31,7 @@ module mongolab {
 	angular.module("mongolab", ["ngResource"])
 	.factory("Project", mongoDbResourceFactory);
 
-	function mongoDbResourceFactory($resource: ng.resource.IResourceService) : ng.resource.IResourceClass  {
+	function mongoDbResourceFactory($resource: ng.resource.IResourceService): IMongoDbResourceClass  {
 
 		//ngResource definition of an action descriptor, will inject this into our Project class below
 		var updateDescriptor: ng.resource.IActionDescriptor = { method: "PUT" };

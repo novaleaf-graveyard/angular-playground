@@ -1,10 +1,13 @@
 /// <reference path="_all.ts"/>
-var wire;
-(function (wire) {
+var project;
+(function (project) {
     "use strict";
-    wire.str;
+    //create our angular module "project", and depend on the "mongolab" project
     angular.module("project", [
         "mongolab"
-    ]);
-})(wire || (wire = {}));
+    ]).config(moduleConfig);
+    function moduleConfig($roueProvider) {
+        Logger.assert(false, "what's $routeProvider?  i can't find it in the docs for http://docs.angularjs.org/api/angular.Module");
+    }
+})(project || (project = {}));
 //@ sourceMappingURL=project.js.map
