@@ -114,6 +114,11 @@ and when working through this, is updating __THIS readme__ based on the outcome!
 	- investigating other frameworks (looking for something less "heavy") next i will try [Knockback](http://kmalakoff.github.com/knockback/)
 1. create the [Typescript-Knockback-playground](https://github.com/Novaleaf/Typescript-Knockback-Playground) github project to give it a try
 	- will start by recreating the [official knockback todoMVC tutorial](http://kmalakoff.github.com/knockback/app_todos.html) in typescript ([demo](http://kmalakoff.github.com/knockback-todos-app/))
+1. original idea (now crossed-out) 
+	- # thus i will not be updating this project any more unless i come back to angularjs... (i've moved to [Typescript-Knockback-playground](https://github.com/Novaleaf/Typescript-Knockback-Playground))
+1. back to angular.js,  seems knockback is ok, but not very popular, and it juggles between 3 different frameworks...  
+	- so going to plod thru the rest of the angular tutorials before deciding what to do next....
+1. port my core libraries project to be used for all javascript projects (sync-core.cmd added here)
 
-# thus i will not be updating this project any more unless i come back to angularjs... (i've moved to [Typescript-Knockback-playground](https://github.com/Novaleaf/Typescript-Knockback-Playground))
+
 

@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <ProjectGuid>{AB6B7D98-13BA-4DD5-BB00-CA31C52CBF3C}</ProjectGuid>
+    <ProjectGuid>{D8391FE6-7B31-47F0-A12F-78BB3B4CA1D4}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <OutputPath>bin</OutputPath>
@@ -21,86 +21,33 @@
     <UpgradeBackupLocation />
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="AddSomeControlTypescripted\index.html" />
-    <Content Include="AddSomeControlTypescripted\todo.css" />
-    <Content Include="AddSomeControlTypescripted\todo.js">
-      <DependentUpon>todo.ts</DependentUpon>
-    </Content>
-    <Content Include="AddSomeControlTypescripted\todo.ts" />
-    <Content Include="AddSomeControl\index.html" />
-    <TypeScriptCompile Include="AddSomeControl\todo.ts" />
-    <Content Include="AddSomeControl\todo.css" />
-    <Content Include="AddSomeControl\todo.js">
-      <DependentUpon>todo.ts</DependentUpon>
-    </Content>
-    <TypeScriptCompile Include="scripts\helpers.ts" />
+    <Content Include="dev-libs\jquery\jquery-1.9.1.js" />
+    <Content Include="dev-libs\knockback\0.16.8\knockback-full-stack.js" />
     <Content Include="scripts\helpers.js">
       <DependentUpon>helpers.ts</DependentUpon>
     </Content>
-    <Content Include="TheBasics.html" />
-    <Fakes Include="_all.ts" />
-    <Content Include="WireUpABackend\index.html" />
-    <TypeScriptCompile Include="WireUpABackend\project.ts" />
-    <TypeScriptCompile Include="WireUpABackend\mongolab.ts" />
-    <Content Include="WireUpABackend\mongolab.js">
-      <DependentUpon>mongolab.ts</DependentUpon>
+    <Content Include="scripts\helpers.min.js">
+      <DependentUpon>helpers.ts</DependentUpon>
     </Content>
-    <Content Include="WireUpABackend\project.js">
-      <DependentUpon>project.ts</DependentUpon>
-    </Content>
-    <Fakes Include="WireUpABackend\_all.ts" />
-    <Content Include="WireUpABackend\_all.js">
-      <DependentUpon>_all.ts</DependentUpon>
-    </Content>
-    <Content Include="_all.js">
-      <DependentUpon>_all.ts</DependentUpon>
-    </Content>
+    <TypeScriptCompile Include="scripts\helpers.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="_all.js.map">
-      <DependentUpon>_all.ts</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="AddSomeControl\todo.js.map">
-      <DependentUpon>todo.ts</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Content Include="web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="AddSomeControlTypescripted\todo.js.map">
-      <DependentUpon>todo.ts</DependentUpon>
-    </Content>
     <Content Include="Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="scripts\helpers.js.map">
       <DependentUpon>helpers.ts</DependentUpon>
     </Content>
-    <Content Include="sync-core.cmd" />
-    <None Include="web.Debug.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
-    <None Include="web.Release.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
-    <Content Include="WireUpABackend\project.js.map">
-      <DependentUpon>project.ts</DependentUpon>
-    </Content>
-    <Content Include="WireUpABackend\_all.js.map">
-      <DependentUpon>_all.ts</DependentUpon>
-    </Content>
-    <Content Include="WireUpABackend\mongolab.js.map">
-      <DependentUpon>mongolab.ts</DependentUpon>
-    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dev-libs\Readme.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>AngularTutorials</RootNamespace>
+    <RootNamespace>Novaleaf_Core_Libraries</RootNamespace>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
@@ -111,9 +58,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>23772</DevelopmentServerPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:6202/</IISUrl>
+          <IISUrl>http://localhost:1171/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -127,7 +74,6 @@
     <TypeScriptTarget>ES3</TypeScriptTarget>
     <TypeScriptIncludeComments>true</TypeScriptIncludeComments>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
-    <DefineConstants>DEBUG</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <TypeScriptTarget>ES3</TypeScriptTarget>
@@ -135,7 +81,4 @@
     <TypeScriptSourceMap>false</TypeScriptSourceMap>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" />
-  <PropertyGroup>
-    <PreBuildEvent>$(ProjectDir)sync-core.cmd</PreBuildEvent>
-  </PropertyGroup>
 </Project>
