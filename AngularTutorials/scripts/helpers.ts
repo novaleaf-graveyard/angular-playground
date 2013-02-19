@@ -7,10 +7,10 @@ var DEBUG_MODE = true;
 module Logger{
 	"use strict"
 
-	export var assert :(condition: bool, message: string, ...optionalParams: string[])=>void;
-
+	export var assert :(condition: bool, message?: string, ...optionalParams: string[])=>void;
+	
 	if (DEBUG_MODE) {
-		assert = function(condition: bool, message: string, ...optionalParams: string[]) {
+		assert = function(condition: bool, message?: string, ...optionalParams: string[]) {
 			if (!condition) {
 				debugger;
 				console.error(message, optionalParams);
@@ -20,8 +20,22 @@ module Logger{
 			}
 		};
 	}else{
-		assert = function (condition: bool, message: string, ...optionalParams: string[]) { };
+		assert = function (condition: bool, message?: string, ...optionalParams: string[]) { };
 	}
+
+	export var inspect: (condition: bool)=>void;
+
+		if (DEBUG_MODE) {
+			inspect = function (condition) {
+				if (!condition) {
+					debugger;
+				} else {
+					//nothing, SitNorm
+				}
+			};
+		}else{
+			inspect = function (condition) { };
+		}
 
 
 

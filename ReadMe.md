@@ -108,6 +108,7 @@ and when working through this, is updating __THIS readme__ based on the outcome!
 1. create this github project and document it
 1. do angular js tutorials "The Basics" and "Add Some Control" ( from the [first page of the site](http://angularjs.org/#project-html))
 	- try to use Emmet/Zen coding for the html sections
+		- beware, zen expansion has a bug:   expansion of input[type=text name=name ng-model=project.name required]  currently misses the "name" tag (bug is filed with web essentials)
 	- redo "Add Some Control" using Typescript interfaces / modules (called "AddSomeControlTypescripted" in the source)
 	- ([jason's implementation here](AngularTutorials))
 1. run into a brick wall when trying to look inside angularjs to see "how it works" (very complex internals, and [very poor documentation](http://docs.angularjs.org/api/angular.module)
@@ -122,3 +123,6 @@ and when working through this, is updating __THIS readme__ based on the outcome!
 
 
 
+## todo
+- look at angular DI methods like angular.module, $routeProvider.controller, etc and create interfaces for the provided services
+	- and make sure people can effectively overwrite with their own....

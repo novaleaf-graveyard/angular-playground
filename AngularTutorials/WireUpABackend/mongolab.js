@@ -20,19 +20,20 @@ var mongolab;
         //looks to be a facade, invoking the singleton instance of ProjectClass
         //provide implemention of the update method
         Project.prototype.update = function (cb) {
-            Logger.assert(false, "jason, figure out type of 'this', so we can maybe strongly type it");
+            var _this = this;
             //not sure what "this" is or where the value of _id is comming from
             return Project.update({
-                id: this._id.$oid
+                id: _this._id.$oid
             }, angular.extend({
-            }, this, {
+            }, _this, {
                 _id: undefined
             }), cb);
         };
         //provide implemention of the destroy method
         Project.prototype.destroy = function (cb) {
+            var _this = this;
             return Project.remove({
-                id: this._id.$oid
+                id: _this._id.$oid
             }, cb);
         };
         return Project;

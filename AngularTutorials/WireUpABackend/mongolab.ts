@@ -7,7 +7,7 @@ module mongolab {
 
 	/** definition of our custom Resource Class */
 	export interface IMongoDbResourceClass extends ng.resource.IResourceClass {
-
+		new (toClone :IMongoDbResource) : IMongoDbResource;
 		/** reference to our prototype (used to create instances of IMongoDbResource), 
 		which we can add additional functionality on to */
 		prototype: IMongoDbResource;
@@ -24,7 +24,17 @@ module mongolab {
 		update(cb): void;
 		/** injected via our call to IMongoDbResourceClass.prototype */
 		destroy(cb): void;
+
+		/** mongodb resource specific values */
+		_id: { $oid: string; };
+		__proto__: IMongoDbResourceClass;
+		/** mongodb our schema specific values value */
+		description: string;
+		name: string;
+		site: string;
 	}
+
+	
 
 
 	//cloud persistance
@@ -49,14 +59,14 @@ module mongolab {
 		//provide implemention of the update method
 		Project.prototype.update = function (cb) {
 
-			Logger.assert(false, "jason, figure out type of 'this', so we can maybe strongly type it");
+			var _this = <IMongoDbResource>this;
 
 
 			//not sure what "this" is or where the value of _id is comming from
-			return Project.update({ id: this._id.$oid }
+			return Project.update({ id: _this._id.$oid }
 					, angular.extend(
 					{}
-						, this
+						, _this
 						, { _id: undefined }
 						)
 					, cb
@@ -64,7 +74,8 @@ module mongolab {
 		};
 		//provide implemention of the destroy method
 		Project.prototype.destroy = function (cb) {
-			return Project.remove({ id: this._id.$oid }, cb);
+			var _this = <IMongoDbResource>this;
+			return Project.remove({ id: _this._id.$oid }, cb);
 		};
 
 		return Project;

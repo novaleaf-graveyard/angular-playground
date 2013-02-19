@@ -25,5 +25,18 @@ var Logger;
             }
         };
     }
+    Logger.inspect;
+    if(DEBUG_MODE) {
+        Logger.inspect = function (condition) {
+            if(!condition) {
+                debugger;
+
+            } else {
+            }
+        };
+    } else {
+        Logger.inspect = function (condition) {
+        };
+    }
 })(Logger || (Logger = {}));
 //@ sourceMappingURL=helpers.js.map

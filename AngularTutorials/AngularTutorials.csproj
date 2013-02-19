@@ -42,6 +42,7 @@
     <Content Include="WireUpABackend\index.html" />
     <TypeScriptCompile Include="WireUpABackend\project.ts" />
     <TypeScriptCompile Include="WireUpABackend\mongolab.ts" />
+    <Content Include="WireUpABackend\list.html" />
     <Content Include="WireUpABackend\mongolab.js">
       <DependentUpon>mongolab.ts</DependentUpon>
     </Content>
