@@ -39,6 +39,22 @@
     </Content>
     <Content Include="TheBasics.html" />
     <Fakes Include="_all.ts" />
+    <Content Include="WireUpABackendTypescripted\detail.html" />
+    <Content Include="WireUpABackendTypescripted\index.html" />
+    <Content Include="WireUpABackendTypescripted\list.html" />
+    <Content Include="WireUpABackendTypescripted\mongolab.js">
+      <DependentUpon>mongolab.ts</DependentUpon>
+    </Content>
+    <Content Include="WireUpABackendTypescripted\mongolab.ts" />
+    <Content Include="WireUpABackendTypescripted\project.js">
+      <DependentUpon>project.ts</DependentUpon>
+    </Content>
+    <Content Include="WireUpABackendTypescripted\project.ts" />
+    <Content Include="WireUpABackendTypescripted\_all.js">
+      <DependentUpon>_all.ts</DependentUpon>
+    </Content>
+    <Content Include="WireUpABackendTypescripted\_all.ts" />
+    <Content Include="WireUpABackend\detail.html" />
     <Content Include="WireUpABackend\index.html" />
     <TypeScriptCompile Include="WireUpABackend\project.ts" />
     <TypeScriptCompile Include="WireUpABackend\mongolab.ts" />
@@ -93,6 +109,15 @@
       <DependentUpon>_all.ts</DependentUpon>
     </Content>
     <Content Include="WireUpABackend\mongolab.js.map">
+      <DependentUpon>mongolab.ts</DependentUpon>
+    </Content>
+    <Content Include="WireUpABackendTypescripted\_all.js.map">
+      <DependentUpon>_all.ts</DependentUpon>
+    </Content>
+    <Content Include="WireUpABackendTypescripted\project.js.map">
+      <DependentUpon>project.ts</DependentUpon>
+    </Content>
+    <Content Include="WireUpABackendTypescripted\mongolab.js.map">
       <DependentUpon>mongolab.ts</DependentUpon>
     </Content>
   </ItemGroup>

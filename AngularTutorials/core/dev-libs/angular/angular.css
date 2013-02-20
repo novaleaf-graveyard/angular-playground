@@ -1,0 +1,12 @@
+﻿body {
+
+}
+
+
+/* css style directives for angular,  from http://docs.angularjs.org/api/ng.directive */
+
+form.ng-valid, /*Is set if the form is valid.*/
+form.ng-invalid, /*Is set if the form is invalid.*/
+form.ng-pristine, /*Is set if the form is pristine.*/
+form.ng-dirty  /*Is set if the form is dirty.*/
+{}

@@ -10,9 +10,27 @@
 @echo .
 
 @rem @echo off
-set thisPath=%0
 
+@rem @echo ------------------------------------
+@rem @echo SET UP ENVIRONMENT HELPERS
+@rem @echo ------------------------------------
+
+@rem get location of the batch file
+set thisPath=%0
 FOR /F %%I IN ("%0") DO SET thisDir=%%~dpI
+
+@rem get date
+FOR /F "TOKENS=1* DELIMS= " %%A IN ('DATE/T') DO SET CDATE=%%B
+FOR /F "TOKENS=1,2 eol=/ DELIMS=/ " %%A IN ('DATE/T') DO SET mm=%%B
+FOR /F "TOKENS=1,2 DELIMS=/ eol=/" %%A IN ('echo %CDATE%') DO SET dd=%%B
+FOR /F "TOKENS=2,3 DELIMS=/ " %%A IN ('echo %CDATE%') DO SET yyyy=%%B
+SET date=%yyyy%%mm%%dd%
+
+
+@rem @echo ------------------------------------
+@rem @echo SET UP PURPOSE HELPERS
+@rem @echo ------------------------------------
+
 
 set targetDir=%thisDir%core
 set sourceProject=Novaleaf-Core-Libraries
